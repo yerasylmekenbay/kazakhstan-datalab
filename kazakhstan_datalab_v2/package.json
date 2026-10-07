@@ -1,0 +1,1 @@
+{"name":"kazakhstan-datalab-v2","type":"module","scripts":{"start":"node server.mjs"},"dependencies":{"dotenv":"latest","express":"latest","openai":"latest"}}
