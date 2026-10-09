@@ -1,19 +1,17 @@
-Kazakhstan DataLab — Gemini AI нұсқасы
+KAZAKHSTAN DATALAB 3.0 — LIVE + MANUAL
 
-LOCAL:
-1) npm install
-2) .env файлын жасаңыз
-3) GEMINI_API_KEY=... мәнін енгізіңіз
-4) npm start
-5) http://localhost:3000
-
-RENDER:
-Root Directory: kazakhstan_datalab_v2
+Install: npm install
+Run: npm start
+Render Root Directory: kazakhstan_datalab_v2
 Build Command: npm install
 Start Command: npm start
-Environment Variable:
-  GEMINI_API_KEY = Gemini API key (құпия)
-Optional:
-  GEMINI_MODEL = gemini-3.8-flash
+Environment variable: GEMINI_API_KEY (optional for stats; required for Gemini AI).
 
-API кілтін index.html, GitHub немесе ашық кодқа жазбаңыз.
+/api/stats retrieves Kazakhstan World Bank WDI data and caches 12 hours in server memory.
+The Statistics page can refresh, manually override individual indicators, export CSV and import CSV.
+IMPORTANT: Manual changes live ONLY in the current browser localStorage. They do not update the public server for everyone.
+This avoids pretending Render Free ephemeral filesystem is a permanent database.
+Some legacy panels/region figures are still static. Indicators have differing publication years.
+Gemini model default: gemini-2.5-flash; check availability in your Gemini project.
+Do not commit API keys.
+World Bank API: https://api.worldbank.org/v2/country/KAZ/indicator/SP.POP.TOTL?format=json
